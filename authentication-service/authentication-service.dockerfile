@@ -15,6 +15,6 @@ COPY . .
 RUN go install github.com/cespare/reflex@latest
 
 # Expose port 5050
-EXPOSE 5050
+EXPOSE 5052
 
 CMD reflex  -r '\.go$$' -s -- sh -c "go run ./cmd/api main.go" 

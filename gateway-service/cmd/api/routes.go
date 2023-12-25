@@ -1,17 +1,17 @@
-package main
+package api
 
 import (
+	authenticationservice "gateway-service/cmd/api/authentication-service"
 	"net/http"
 
-	"github.com/go-chi/chi/cors"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/cors"
 )
 
-func (app *Config) routes() http.Handler {
+func ApplicationRouter() http.Handler {
 
 	mux := chi.NewRouter()
-
 	mux.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   []string{"http://*", "https://*"},
 		AllowedMethods:   []string{"PUT", "POST", "GET", "DELETE"},
@@ -20,8 +20,8 @@ func (app *Config) routes() http.Handler {
 		MaxAge:           300,
 	}))
 	mux.Use(middleware.Heartbeat("/ping"))
+	mux.Use(middleware.Logger)
 
-	mux.Post("/", app.TestHandler())
+	authenticationservice.Route(mux)
 	return mux
-
 }

@@ -8,12 +8,14 @@ services:
       target: dev
     restart: always
     ports:
-      - "5050:5050"
+      - "5052:5050"
   gateway-service:
     build:
       context: ./../gateway-service
       dockerfile: ./../gateway-service/gateway-service.dockerfile
       target: dev
     restart: always
+    env_file:
+      - ./../gateway-service/.env
     ports:
       - "5051:5050"
