@@ -1,5 +1,4 @@
-FROM golang:1.21.5 as dev
-
+FROM golang:1.21.4 as dev
 
 
 WORKDIR /app
@@ -13,7 +12,7 @@ RUN go mod download
 COPY . .
 RUN go install github.com/cespare/reflex@latest
 
-# Expose port 5050
+# Expose port 5051
 EXPOSE 5051
 
 CMD reflex  -r '\.go$$' -s -- sh -c "go run ./cmd/api main.go" 
