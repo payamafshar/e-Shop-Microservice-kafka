@@ -1,19 +1,17 @@
 version: '3.8'
 
 services:
-  authentication-service:
-    build:
-      context: ./../authentication-service
-      dockerfile: ./../authentication-service/authentication-service.dockerfile
-      target: dev
-    restart: always
-    ports:
-      - "5052:5050"
+  # authentication-service:
+  #   build:
+  #     context: ./../authentication-service
+  #     dockerfile: ./../authentication-service/authentication-service.dockerfile
+  #   restart: always
+  #   ports:
+  #     - "5052:5050"
   gateway-service:
     build:
       context: ./../gateway-service
       dockerfile: ./../gateway-service/gateway-service.dockerfile
-      target: dev
     restart: always
     env_file:
       - ./../gateway-service/.env

@@ -3,15 +3,15 @@ package authenticationservice
 import (
 	"net/http"
 
-	"github.com/go-chi/chi/v5"
+	"github.com/gin-gonic/gin"
 )
 
-func Route(mux *chi.Mux) {
-
-	mux.Get("/", handler)
+func SetupAuthRoutes(group *gin.RouterGroup) {
+	authRoutes := group.Group("auth")
+	authRoutes.GET("/", handler)
 
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("helllo"))
+func handler(ctx *gin.Context) {
+	ctx.JSON(http.StatusAccepted, gin.H{"ASDASD": "TYESD"})
 }

@@ -10,8 +10,10 @@ RUN go mod download
 
 
 COPY . .
-RUN go build -o /gateway-service
+RUN go install github.com/cespare/reflex@latest
+# RUN go build -o /gateway-service
 # Expose port 5051
+EXPOSE 5051
 
-# CMD reflex  -r '\.go$$' -s -- sh -c "go run ./ main.go" 
-CMD [ "/gateway-service" ]
+CMD reflex  -r '\.go$$' -s -- sh -c "go run ./cmd/api main.go" 
+# CMD [ "/gateway-service" ]
