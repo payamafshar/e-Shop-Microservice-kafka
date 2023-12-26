@@ -28,3 +28,9 @@ services:
       - "5000:5000"
     volumes:
       - ./../listner-service/:/app
+  rabbitmq:
+    image: rabbitmq:3.12.10-alpine
+    ports:
+      - "5672:5672"
+    volumes:
+      - ./db-data/rabbitmq/:/var/lib/rabbitmq/
