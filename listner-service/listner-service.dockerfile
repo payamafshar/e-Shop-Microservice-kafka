@@ -1,4 +1,4 @@
-FROM golang:1.21.4 as dev
+FROM golang:1.21.5-alpine3.18 as dev
 
 
 WORKDIR /app
@@ -13,7 +13,7 @@ COPY . .
 RUN go install github.com/cespare/reflex@latest
 # RUN go build -o /gateway-service
 # Expose port 5051
-EXPOSE 3000
+EXPOSE 5000
 
-CMD reflex -g "*.go" go run main.go --start-service
+CMD reflex -g "*.go"  go run ./cmd/api main.go --start-service
 # CMD [ "/gateway-service" ]
