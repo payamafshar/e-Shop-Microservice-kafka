@@ -14,7 +14,7 @@ func SetupServer(PORT int) error {
 	gin.SetMode(gin.DebugMode)
 	// mux := routes.ApplicationRouter()
 	authenticationservice.SetupAuthRoutes(&mux.RouterGroup)
-	err := mux.Run(fmt.Sprintf("0.0.0.0:%d", PORT))
+	err := mux.Run(fmt.Sprintf(":%d", PORT))
 
 	if err != nil {
 		return err

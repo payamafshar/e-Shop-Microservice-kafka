@@ -11,17 +11,12 @@ import (
 )
 
 func main() {
-	err := godotenv.Load("./../../.env")
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-	PORT, err := strconv.Atoi(os.Getenv("PORT"))
-	fmt.Println(PORT)
+	err := godotenv.Load()
 	fmt.Println("conncted to brooker service")
+	PORT, err := strconv.Atoi(os.Getenv("PORT"))
 	err = config.SetupServer(PORT)
 	if err != nil {
 		log.Panic(err)
 	}
-	fmt.Println("yesssssssssssssssssssssss")
 
 }
