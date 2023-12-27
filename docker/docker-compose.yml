@@ -24,13 +24,34 @@ services:
       context: ./../listner-service
       dockerfile: ./../listner-service/listner-service.dockerfile
       target: dev
+
     ports:
       - "5000:5000"
     volumes:
       - ./../listner-service/:/app
+
   rabbitmq:
     image: rabbitmq:3.12.10-alpine
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_PORT: 5672
+      RABBITMQ_DEFAULT_HOST: rabbitmq
     ports:
       - "5672:5672"
+    # volumes:
+    #   - ./db-data/rabbitmq/:/var/lib/rabbitmq/
     volumes:
-      - ./db-data/rabbitmq/:/var/lib/rabbitmq/
+      - ./rabbitmq.config:/etc/rabbitmq/rabbitmq.config
+  rabbitmq-management:
+    image: rabbitmq:3.12.10-management-alpine
+    restart: always
+    depends_on:
+      - rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_HOST: rabbitmq
+    ports:
+      - "15672:15672"
