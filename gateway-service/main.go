@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"gateway-service/cmd/api/config"
 	"log"
 	"os"
@@ -12,7 +11,6 @@ import (
 
 func main() {
 	err := godotenv.Load()
-	fmt.Println("conncted to brooker service")
 	PORT, err := strconv.Atoi(os.Getenv("PORT"))
 	err = config.SetupServer(PORT)
 	if err != nil {
