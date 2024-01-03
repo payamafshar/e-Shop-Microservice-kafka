@@ -1,9 +1,12 @@
-FROM golang:1.21.5-alpine3.18 as dev
 
+FROM golang:1.21.4 AS dev
+ENV GOPROXY=https://goproxy.io,direct
+ENV GOPATH /go
+ENV PATH $PATH:$GOPATH/bin
 
 WORKDIR /app
 
-# Copy go mod and sum files
+
 COPY go.mod go.sum ./
 
 RUN go mod download
@@ -15,5 +18,7 @@ RUN go install github.com/cespare/reflex@latest
 # Expose port 5051
 EXPOSE 5000
 
-CMD reflex -g "*.go"  go run ./cmd/api main.go --start-service
-# CMD [ "/gateway-service" ]
+CMD /go/bin/reflex -s -r '\.go' -R '^vendor/.' -R '^_.*' go run main.go
+
+
+

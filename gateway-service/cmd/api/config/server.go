@@ -19,11 +19,8 @@ func getKafkaWriter(kafkaURL, topic string) *kafka.Writer {
 func SetupServer(PORT int) error {
 	mux := gin.Default()
 	gin.SetMode(gin.DebugMode)
-	kafkaWriter := getKafkaWriter("kafka:9092", "my-topic")
-	// mux := routes.ApplicationRouter()
-	authenticationservice.SetupAuthRoutes(&mux.RouterGroup, kafkaWriter)
+	authenticationservice.SetupAuthRoutes(&mux.RouterGroup)
 	err := mux.Run(fmt.Sprintf("0.0.0.0:%d", PORT))
-	defer kafkaWriter.Close()
 	if err != nil {
 		return err
 	}

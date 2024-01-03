@@ -1,67 +1,53 @@
 package authenticationservice
 
 import (
-	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	kafka "github.com/segmentio/kafka-go"
 )
 
-func SetupAuthRoutes(group *gin.RouterGroup, kafkaWriter *kafka.Writer) {
+func SetupAuthRoutes(group *gin.RouterGroup) {
+
 	authRoutes := group.Group("auth")
-	authRoutes.GET("/", handler(kafkaWriter))
-	authRoutes.POST("/test", Testhandler(kafkaWriter))
+	// authRoutes.GET("/", handler)
+	authRoutes.POST("/test", Testhandler)
 
 }
 
-func handler(kafkaWriter *kafka.Writer) gin.HandlerFunc {
-	return func(ctx *gin.Context) {
+// func handler() gin.HandlerFunc {
+// 	return func(ctx *gin.Context) {
 
-		msg := kafka.Message{
-			Key:   []byte("FromGetRoute"),
-			Value: []byte("helllo"),
-		}
-		err := kafkaWriter.WriteMessages(ctx.Request.Context(), msg)
+// 		msg := kafka.Message{
+// 			Key:   []byte("FromGetRoute"),
+// 			Value: []byte("helllo"),
+// 		}
 
-		if err != nil {
-			ctx.JSON(http.StatusBadGateway, ([]byte(err.Error())))
-			log.Fatalln(err)
-		}
+//			if err != nil {
+//				ctx.JSON(http.StatusBadGateway, ([]byte(err.Error())))
+//				log.Fatalln(err)
+//			}
+//		}
+//	}
+func Testhandler(ctx *gin.Context) {
+
+	var createAccountDto CreateAccountDto
+	if err := ctx.ShouldBindJSON(&createAccountDto); err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
 	}
-}
-func Testhandler(kafkaWriter *kafka.Writer) gin.HandlerFunc {
-	return func(ctx *gin.Context) {
-		dto := new(CreateAccountDto)
-		if err := ctx.ShouldBindJSON(dto); err != nil {
-			ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-			return
-		}
-		msg := kafka.Message{
-			Key:   []byte("FromPostRoute"),
-			Value: []byte(dto.Data),
-		}
-		fmt.Println(dto.Data)
-		err := kafkaWriter.WriteMessages(ctx.Request.Context(), msg)
-		ctx.JSON(http.StatusAccepted, &dto)
-		if err != nil {
-			ctx.JSON(http.StatusBadGateway, ([]byte(err.Error())))
-			log.Fatalln(err)
-		}
+	writer, closeWriter := NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweets")
+	err := writer.WriteBatch(ctx, createAccountDto)
+	if err != nil {
+		ctx.JSON(http.StatusBadGateway, err.Error())
 	}
+	ctx.JSON(http.StatusOK, &createAccountDto)
+	defer closeWriter()
 }
 
 type CreateAccountDto struct {
-	Data string `json:"data"`
-}
-
-func getKafkaTestWriter(kafkaURL, topic string) *kafka.Writer {
-	return &kafka.Writer{
-		Addr:     kafka.TCP(kafkaURL),
-		Topic:    topic,
-		Balancer: &kafka.LeastBytes{},
-	}
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Email     string `json:"email"`
 }
 
 // in this gateway trying to send data if we can get this particiluar message i mean addres And Hello its a key point

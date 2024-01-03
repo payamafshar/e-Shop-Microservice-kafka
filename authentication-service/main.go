@@ -1,13 +1,16 @@
 package main
 
 import (
+	"authentication-service/cmd/api"
 	"context"
+	"errors"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
-	"time"
+	"os/signal"
+	"syscall"
 
-	kafka "github.com/segmentio/kafka-go"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -50,59 +53,34 @@ func getMongoCollection(mongoURL, dbName, collectionName string) *mongo.Collecti
 }
 
 func main() {
-	fmt.Println("helllo from authentication 1 service")
-	kafkaURL := os.Getenv("kafkaURL")
-	topic := os.Getenv("topic")
-	groupID := os.Getenv("groupID")
-	reader := getKafkaReader(kafkaURL, topic, groupID)
-	mongoURL := os.Getenv("mongoURL")
-	dbName := os.Getenv("dbName")
-	collectionName := os.Getenv("collectionName")
-	collection := getMongoCollection(mongoURL, dbName, collectionName)
-	fmt.Println("mongoUri", mongoURL)
-	defer reader.Close()
-	fmt.Println("start consuming ... !!")
-
-	msg, err := reader.ReadMessage(context.Background())
-	if err != nil {
-		log.Println(err)
-	}
-	fmt.Println("asdasdasdasdsad", string(msg.Key))
-	for {
-		str2 := string(msg.Key)
-		fmt.Println(string(msg.Key))
-		fmt.Println("valueeeee", string(msg.Value))
-		if str2 == "FromPostRoute" {
-
-			fmt.Printf("FromPostRoute,%s \n", str2)
-		}
-		fmt.Println(collection)
-		insertResult, err := collection.InsertOne(context.Background(), msg)
-		if err != nil {
-			log.Fatal(err)
-		}
-		fmt.Println("Inserted a single document: ", insertResult.InsertedID)
-		time.Sleep(1 * time.Second)
-
-	}
-
-}
-func getKafkaReader(kafkaURL, topic, groupID string) *kafka.Reader {
-	return kafka.NewReader(kafka.ReaderConfig{
-		Brokers:  []string{kafkaURL},
-		Topic:    topic,
-		GroupID:  groupID,
-		MinBytes: 10e3, // 10KB
-		MaxBytes: 10e6, // 10MB
-
+	writer, closeWriter := api.NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweets")
+	reader, closeReader := api.NewReader[CreateAccountDto]("kafka:9092", "twitter.newTweets", "saver", func(tweet CreateAccountDto) {
+		// retry process
+		fmt.Println("error, retrying ...")
+		writer.WriteBatch(context.TODO(), tweet)
 	})
-}
-func getKafkaReaderTestMsg() *kafka.Reader {
-	return kafka.NewReader(kafka.ReaderConfig{
-		Brokers:  []string{"kafka:9092"},
-		GroupID:  "auth-service",
-		Topic:    "my-topic",
-		MinBytes: 10e3, // 10KB
-		MaxBytes: 10e6, // 10MB
+	defer closeReader()
+	defer closeWriter()
+
+	go reader.Read(func(items CreateAccountDto) error {
+		if items.FirstName != "" {
+			fmt.Println("received a message: ", items.FirstName)
+		}
+		if rand.Intn(100) > 50 {
+			return errors.New("a random error")
+		}
+		return nil
 	})
+
+	exit := make(chan os.Signal, 1)
+	signal.Notify(exit, os.Interrupt, syscall.SIGTERM)
+
+	<-exit
+	fmt.Println("Closing Kafka connections ...")
+}
+
+type CreateAccountDto struct {
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Email     string `json:"email"`
 }
