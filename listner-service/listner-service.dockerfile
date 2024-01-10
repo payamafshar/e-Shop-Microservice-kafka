@@ -1,5 +1,5 @@
 
-FROM golang:1.21.4 AS dev
+FROM golang:1.21.5 AS dev
 ENV GOPROXY=https://goproxy.io,direct
 ENV GOPATH /go
 ENV PATH $PATH:$GOPATH/bin
@@ -16,9 +16,13 @@ COPY . .
 RUN go install github.com/cespare/reflex@latest
 # RUN go build -o /gateway-service
 # Expose port 5051
-EXPOSE 5000
+EXPOSE 5004
 
-CMD /go/bin/reflex -s -r '\.go' -R '^vendor/.' -R '^_.*' go run main.go
+CMD reflex -s -r '\.go' -R '^vendor/.' -R '^_.*' go run main.go
+
+
+
+
 
 
 

@@ -53,6 +53,9 @@ func getMongoCollection(mongoURL, dbName, collectionName string) *mongo.Collecti
 }
 
 func main() {
+	fmt.Println("connected to authentication service")
+	fmt.Println("HELLLO AUTH SERVICEeeeee")
+
 	writer, closeWriter := api.NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweets")
 	reader, closeReader := api.NewReader[CreateAccountDto]("kafka:9092", "twitter.newTweets", "saver", func(tweet CreateAccountDto) {
 		// retry process
