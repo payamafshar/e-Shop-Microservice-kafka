@@ -3,7 +3,6 @@ package api
 import (
 	"context"
 	"encoding/json"
-
 	kafka "github.com/segmentio/kafka-go"
 )
 
@@ -33,10 +32,12 @@ func (r Reader[T]) Read(handler func(items T) error) error {
 		}
 		var t T
 		json.Unmarshal(message.Value, &t)
+
 		err = handler(t)
 		if err != nil {
 			r.onError(t)
 		}
+
 		r.r.CommitMessages(context.TODO(), message)
 	}
 }

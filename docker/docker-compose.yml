@@ -12,6 +12,7 @@ services:
       MongoUsername: root
       MongoPassword: mongo
       collectionName: example
+      testHandler: asdasd
       kafkaURL: kafka:9092
       topic: twitter.newTweets
       GroupID: mongo-group

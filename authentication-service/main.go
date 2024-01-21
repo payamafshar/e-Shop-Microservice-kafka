@@ -5,15 +5,17 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 	"log"
 	"math/rand"
 	"os"
 	"os/signal"
 	"syscall"
-
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
 )
+
+var ctx *gin.Context
 
 func ClientOptions() *options.ClientOptions {
 	// mongoUrl := os.Getenv("mongoURL")
@@ -65,10 +67,11 @@ func main() {
 	defer closeReader()
 	defer closeWriter()
 
-	go reader.Read(func(items CreateAccountDto) error {
-		if items.FirstName != "" {
-			fmt.Println("received a message: ", items.FirstName)
+	go reader.Read(func(dto CreateAccountDto) error {
+		if dto.FirstName != "" {
+			fmt.Println("received a message: ", dto.url)
 		}
+		fmt.Println(dto.url)
 		if rand.Intn(100) > 50 {
 			return errors.New("a random error")
 		}
@@ -86,4 +89,5 @@ type CreateAccountDto struct {
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
 	Email     string `json:"email"`
+	url       string `json:url`
 }
