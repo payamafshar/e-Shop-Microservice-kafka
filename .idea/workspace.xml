@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4d85552-a2e3-44e7-a3b4-ec2d91fea667" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/authentication-service/test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/cmd/api/Reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/cmd/api/Reader.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/cmd/api/authentication-service/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/cmd/api/authentication-service/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listner-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/listner-service/main.go" afterDir="false" />
-    </list>
+    <list default="true" id="e4d85552-a2e3-44e7-a3b4-ec2d91fea667" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
