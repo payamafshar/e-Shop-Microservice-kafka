@@ -5,7 +5,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"log"
@@ -14,8 +13,6 @@ import (
 	"os/signal"
 	"syscall"
 )
-
-var ctx *gin.Context
 
 func ClientOptions() *options.ClientOptions {
 	// mongoUrl := os.Getenv("mongoURL")
@@ -77,6 +74,9 @@ func main() {
 		}
 		return nil
 	})
+	go func() {
+		Reciver()
+	}()
 
 	exit := make(chan os.Signal, 1)
 	signal.Notify(exit, os.Interrupt, syscall.SIGTERM)

@@ -4,7 +4,113 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4d85552-a2e3-44e7-a3b4-ec2d91fea667" name="Changes" comment="" />
+    <list default="true" id="e4d85552-a2e3-44e7-a3b4-ec2d91fea667" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/github.com/bytedance/sonic/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/github.com/bytedance/sonic/@v/v1.10.0-rc.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/github.com/bytedance/sonic/@v/v1.10.2.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/github.com/bytedance/sonic/@v/v1.10.2.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/github.com/bytedance/sonic/@v/v1.5.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/go.mongodb.org/mongo-driver/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/go.mongodb.org/mongo-driver/@v/v1.13.1.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/go.mongodb.org/mongo-driver/@v/v1.13.1.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/arch/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/arch/@v/v0.0.0-20210923205945-b76863e36670.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/arch/@v/v0.6.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/arch/@v/v0.6.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/v0.0.0-20190308221718-c2843e01d9a2.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/v0.0.0-20210921155107-089bfa567519.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/v0.0.0-20220622213112-05595931fe9d.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/v0.14.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/v0.17.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/crypto/@v/v0.17.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/mod/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/mod/@v/v0.6.0-dev.0.20220419223038-86c51ed26bb4.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/mod/@v/v0.8.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/mod/@v/v0.8.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.0.0-20190620200207-3b0461eec859.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.0.0-20210226172049-e18ecbb05110.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.0.0-20211112202133-69e39bad7dc2.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.0.0-20220722155237-a158d28d115b.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.10.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.17.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.19.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.19.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/net/@v/v0.6.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sync/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sync/@v/v0.0.0-20190423024810-112230192c58.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sync/@v/v0.0.0-20220722155255-886fb9371eb4.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sync/@v/v0.1.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sync/@v/v0.1.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.0.0-20190215142949-d0b11bdaac8a.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.0.0-20201119102817-f84b799fce68.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.0.0-20210423082822-04245dca01da.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.0.0-20210615035016-665e8c7367d1.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.0.0-20220520151302-bc2c85ada10a.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.0.0-20220722155257-8c9f86f7a55f.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.13.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.15.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.15.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.5.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.6.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/sys/@v/v0.8.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/v0.0.0-20210927222741-03fcf44c2211.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/v0.13.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/v0.15.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/v0.5.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/term/@v/v0.8.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.13.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.14.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.14.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.3.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.3.3.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.3.6.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.3.7.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.3.8.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.7.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/text/@v/v0.9.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/tools/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/tools/@v/v0.0.0-20191119224855-298f0cb1881e.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/tools/@v/v0.1.12.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/tools/@v/v0.6.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/tools/@v/v0.6.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/xerrors/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/xerrors/@v/v0.0.0-20190717185122-a985d3407aa7.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/google.golang.org/protobuf/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/google.golang.org/protobuf/@v/v1.32.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/google.golang.org/protobuf/@v/v1.32.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/check.v1/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/yaml.v3/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/yaml.v3/@v/v3.0.1.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/gopkg.in/yaml.v3/@v/v3.0.1.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/nullprogram.com/x/optparse/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/nullprogram.com/x/optparse/@v/v1.0.0.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/nullprogram.com/x/optparse/@v/v1.0.0.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/rsc.io/pdf/@v/list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/rsc.io/pdf/@v/v0.1.1.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/pkg/mod/cache/download/rsc.io/pdf/@v/v0.1.1.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/reciver.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/cmd/api/authentication-service/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/cmd/api/authentication-service/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +120,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Go File" />
         <option value="TypeScript JSX File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -42,25 +148,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go Build.App Engine.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lion&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\GoLand 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.App Engine.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/helltion/e-Shop-Microservice-kafka/authentication-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\GoLand 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="App Engine" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="e-Shop-Microservice-kafka" />

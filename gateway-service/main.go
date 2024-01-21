@@ -8,8 +8,9 @@ import (
 )
 
 func main() {
-	PORT, err := strconv.Atoi(os.Getenv("PORT"))
-	err = config.SetupServer(PORT)
+	PORT := os.Args[1]
+	port, err := strconv.Atoi(PORT)
+	err = config.SetupServer(port)
 	if err != nil {
 		log.Panic(err)
 	}

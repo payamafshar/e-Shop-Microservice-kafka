@@ -11,7 +11,13 @@ func SetupAuthRoutes(group *gin.RouterGroup) {
 	authRoutes := group.Group("auth")
 	// authRoutes.GET("/", handler)
 	authRoutes.POST("/test", Testhandler)
+	authRoutes.POST("/test2", IncomingHandler)
 
+}
+
+// data type of incoming data from DownloadHandler
+type WriteData struct {
+	data string
 }
 
 // func handler() gin.HandlerFunc {
@@ -31,7 +37,8 @@ func SetupAuthRoutes(group *gin.RouterGroup) {
 func Testhandler(ctx *gin.Context) {
 
 	var createAccountDto CreateAccountDto
-	if err := ctx.ShouldBindJSON(&createAccountDto); err != nil {
+
+	if err := ctx.ShouldBindJSON(&incomingData); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
@@ -39,7 +46,10 @@ func Testhandler(ctx *gin.Context) {
 	fmt.Println(secureURL)
 	createAccountDto.url = secureURL
 	writer, closeWriter := NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweets")
+	writer1, closeWriter1 := NewWriter[WriteData]("kafka:9092", "twitter.newTweetss")
 	err := writer.WriteBatch(ctx, createAccountDto)
+	err = writer1.WriteBatch(ctx, incomingData)
+	defer closeWriter1()
 	if err != nil {
 		ctx.JSON(http.StatusBadGateway, err.Error())
 	}
@@ -60,6 +70,30 @@ func DownloadHandler(ctx *gin.Context) string {
 	fmt.Println("Context From DownloadHandler", "c.Request.UserAgent")
 	TEST := ctx.ContentType()
 	return TEST
+
+}
+
+type WriteData struct {
+	data string
+}
+
+func IncomingHandler(ctx *gin.Context) {
+	var incomingData WriteData
+	if err := ctx.ShouldBindJSON(&incomingData); err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	secureURL := DownloadHandler(ctx)
+	fmt.Println("ylylyl", secureURL)
+	writer1, closeWriter1 := NewWriter[WriteData]("kafka:9092", "twitter.newTweetss")
+	err := writer1.WriteBatch(ctx, incomingData)
+	err = writer1.WriteBatch(ctx, incomingData)
+	defer closeWriter1()
+	if err != nil {
+		ctx.JSON(http.StatusBadGateway, err.Error())
+	}
+	ctx.JSON(http.StatusOK, &incomingData)
+	defer closeWriter1()
 
 }
 

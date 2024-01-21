@@ -31,7 +31,7 @@ services:
       KAFKA_TOPIC: twitter.newTweets
       KAFKA_URL: kafka:9092
     ports:
-      - "3000:3000"
+      - "4000:4000"
     volumes:
       - ./../gateway-service:/app
     depends_on:
