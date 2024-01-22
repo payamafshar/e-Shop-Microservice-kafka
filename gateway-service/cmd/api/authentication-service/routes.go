@@ -15,10 +15,11 @@ func SetupAuthRoutes(group *gin.RouterGroup) {
 
 }
 
-// data type of incoming data from DownloadHandler
 type WriteData struct {
 	data string
 }
+
+// data type of incoming data from DownloadHandler
 
 // func handler() gin.HandlerFunc {
 // 	return func(ctx *gin.Context) {
@@ -38,7 +39,7 @@ func Testhandler(ctx *gin.Context) {
 
 	var createAccountDto CreateAccountDto
 
-	if err := ctx.ShouldBindJSON(&incomingData); err != nil {
+	if err := ctx.ShouldBindJSON(&createAccountDto); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
@@ -46,9 +47,10 @@ func Testhandler(ctx *gin.Context) {
 	fmt.Println(secureURL)
 	createAccountDto.url = secureURL
 	writer, closeWriter := NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweets")
-	writer1, closeWriter1 := NewWriter[WriteData]("kafka:9092", "twitter.newTweetss")
+	writer1, closeWriter1 := NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweetss")
+
+	fmt.Println("writer", writer1)
 	err := writer.WriteBatch(ctx, createAccountDto)
-	err = writer1.WriteBatch(ctx, incomingData)
 	defer closeWriter1()
 	if err != nil {
 		ctx.JSON(http.StatusBadGateway, err.Error())
@@ -71,10 +73,6 @@ func DownloadHandler(ctx *gin.Context) string {
 	TEST := ctx.ContentType()
 	return TEST
 
-}
-
-type WriteData struct {
-	data string
 }
 
 func IncomingHandler(ctx *gin.Context) {
