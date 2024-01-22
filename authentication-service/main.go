@@ -2,7 +2,6 @@ package main
 
 import (
 	"authentication-service/cmd/api"
-	"authentication-service/cmd/reciver"
 	"context"
 	"errors"
 	"fmt"
@@ -13,6 +12,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 )
 
 func ClientOptions() *options.ClientOptions {
@@ -76,7 +76,8 @@ func main() {
 		return nil
 	})
 	go func() {
-		reciver.Reciver()
+		time.Sleep(2 * time.Second)
+
 	}()
 
 	exit := make(chan os.Signal, 1)

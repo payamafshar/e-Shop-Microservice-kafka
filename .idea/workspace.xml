@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d85552-a2e3-44e7-a3b4-ec2d91fea667" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/cmd/reciver/reciver.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/reciver/reciver.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/reciver.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/cmd/reciver/reciver.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +31,7 @@
     <option name="urls">
       <list>
         <option value="file://$PROJECT_DIR$/../go/" />
+        <option value="file://$PROJECT_DIR$/.idea" />
       </list>
     </option>
     <option name="useGoPathFromSystemEnvironment" value="false" />
@@ -46,28 +47,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go Build.App Engine.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/helltion/e-Shop-Microservice-kafka/authentication-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\GoLand 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.App Engine.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/helltion/e-Shop-Microservice-kafka/authentication-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\GoLand 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\helltion\e-Shop-Microservice-kafka\authentication-service\reciver" />
+      <recent name="\\wsl$\Ubuntu\home\helltion\e-Shop-Microservice-kafka\authentication-service" />
       <recent name="\\wsl$\Ubuntu\home\helltion\e-Shop-Microservice-kafka\authentication-service\cmd\reciver" />
     </key>
   </component>

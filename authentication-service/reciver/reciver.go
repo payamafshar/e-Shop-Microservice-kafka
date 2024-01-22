@@ -14,7 +14,7 @@ type WriteData struct {
 	data string
 }
 
-func Reciver() {
+func RecivedData() {
 
 	writer, closeWriter := api.NewWriter[WriteData]("kafka:9092", "twitter.newTweets")
 	reader, closeReader := api.NewReader[WriteData]("kafka:9092", "twitter.newTweets", "saver", func(incomingData WriteData) {
