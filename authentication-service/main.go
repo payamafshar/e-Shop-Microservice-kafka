@@ -2,6 +2,7 @@ package main
 
 import (
 	"authentication-service/cmd/api"
+	"authentication-service/cmd/reciver"
 	"context"
 	"errors"
 	"fmt"
@@ -75,7 +76,7 @@ func main() {
 		return nil
 	})
 	go func() {
-		Reciver()
+		reciver.Reciver()
 	}()
 
 	exit := make(chan os.Signal, 1)
