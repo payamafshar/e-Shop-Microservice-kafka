@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 type User struct {
@@ -11,6 +12,7 @@ type User struct {
 }
 
 func main() {
-	var user User
-	fmt.Println("asdasdasd", user.Name)
+	PORT := os.Args[1]
+	fmt.Println(PORT)
+	fmt.Println("PORT IS FROM CMDARGUMNT", PORT)
 }
