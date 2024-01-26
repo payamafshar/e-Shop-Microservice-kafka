@@ -17,7 +17,7 @@ type WriteData struct {
 func RecivedData() {
 
 	writer, closeWriter := api.NewWriter[WriteData]("kafka:9092", "twitter.newTweets")
-	reader, closeReader := api.NewReader[WriteData]("kafka:9092", "twitter.newTweets", "saver", func(incomingData WriteData) {
+	reader, closeReader := api.NewReader[WriteData]("kafka:9092", "twitter.newTweetss", "saver", func(incomingData WriteData) {
 		// retry process
 		fmt.Println("error, retrying ...")
 		writer.WriteBatch(context.TODO(), incomingData.data)

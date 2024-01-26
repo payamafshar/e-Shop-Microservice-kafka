@@ -12,7 +12,6 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"time"
 )
 
 func ClientOptions() *options.ClientOptions {
@@ -52,7 +51,11 @@ func getMongoCollection(mongoURL, dbName, collectionName string) *mongo.Collecti
 	return collection
 }
 
-func main() {
+type WriteData struct {
+	data string
+}
+
+func main() {cd ..
 	fmt.Println("connected to authentication service")
 	fmt.Println("HELLLO AUTH SERVICEeeeee")
 
@@ -62,8 +65,13 @@ func main() {
 		fmt.Println("error, retrying ...")
 		writer.WriteBatch(context.TODO(), tweet)
 	})
-	defer closeReader()
-	defer closeWriter()
+	//reader1, closeReader1 := api.NewReader[WriteData]("kafka:9092", "twitter.newTweets", "saver", func(tweet WriteData) {
+	// retry process
+	fmt.Println("error, retrying ...")
+	//writer.WriteBatch(context.TODO(), tweet.data)
+
+	//defer closeReader()
+	//defer closeWriter()
 
 	go reader.Read(func(dto CreateAccountDto) error {
 		if dto.FirstName != "" {
@@ -75,10 +83,10 @@ func main() {
 		}
 		return nil
 	})
-	go func() {
-		time.Sleep(2 * time.Second)
-
-	}()
+	//go func() {
+	//	time.Sleep(2 * time.Second)
+	//
+	//}()
 
 	exit := make(chan os.Signal, 1)
 	signal.Notify(exit, os.Interrupt, syscall.SIGTERM)
