@@ -55,7 +55,7 @@ type WriteData struct {
 	data string
 }
 
-func main() {cd ..
+func main() {
 	fmt.Println("connected to authentication service")
 	fmt.Println("HELLLO AUTH SERVICEeeeee")
 
