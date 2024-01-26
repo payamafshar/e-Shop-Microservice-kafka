@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="helltion" type="docker-deploy" factoryName="docker-compose.yml" editBeforeRun="true" activateToolWindowBeforeRun="false" server-name="Docker">
+    <deployment type="docker-compose.yml">
+      <settings>
+        <option name="envFilePath" value="" />
+        <option name="services">
+          <list>
+            <option value="authentication-service" />
+            <option value="gateway-service" />
+            <option value="listner-service" />
+          </list>
+        </option>
+        <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        <option name="upDetach" value="false" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

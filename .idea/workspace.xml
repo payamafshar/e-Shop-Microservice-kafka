@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d85552-a2e3-44e7-a3b4-ec2d91fea667" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/README.MD" afterDir="false" />
     </list>
@@ -49,6 +50,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultGoTemplateProperty": "Go File",
+    "Docker.Unnamed.executor": "Run",
+    "Docker.helltion.executor": "Run",
     "Go Build.App Engine.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -58,7 +61,7 @@
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/helltion/e-Shop-Microservice-kafka/authentication-service",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/helltion/e-Shop-Microservice-kafka/docker/docker-compose.yml",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -73,7 +76,7 @@
       <recent name="\\wsl$\Ubuntu\home\helltion\e-Shop-Microservice-kafka\authentication-service\cmd\reciver" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.helltion">
     <configuration name="App Engine" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="e-Shop-Microservice-kafka" />
       <working_directory value="$PROJECT_DIR$" />
@@ -82,6 +85,10 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.helltion" />
+      <item itemvalue="Go Build.App Engine" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

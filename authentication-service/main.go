@@ -58,21 +58,21 @@ type WriteData struct {
 func main() {
 	fmt.Println("connected to authentication service")
 	fmt.Println("HELLLO AUTH SERVICEeeeee")
+	var dto *CreateAccountDto
 
 	writer, closeWriter := api.NewWriter[CreateAccountDto]("kafka:9092", "twitter.newTweets")
 	reader, closeReader := api.NewReader[CreateAccountDto]("kafka:9092", "twitter.newTweets", "saver", func(tweet CreateAccountDto) {
 		// retry process
 		fmt.Println("error, retrying ...")
-		writer.WriteBatch(context.TODO(), tweet)
+		writer.WriteBatch(context.TODO(), dto)
 	})
 	//reader1, closeReader1 := api.NewReader[WriteData]("kafka:9092", "twitter.newTweets", "saver", func(tweet WriteData) {
 	// retry process
 	fmt.Println("error, retrying ...")
-	//writer.WriteBatch(context.TODO(), tweet.data)
+	writer.WriteBatch(context.TODO(), tweet.Email)
 
-	//defer closeReader()
-	//defer closeWriter()
-
+	defer closeReader()
+	defer closeWriter()
 	go reader.Read(func(dto CreateAccountDto) error {
 		if dto.FirstName != "" {
 			fmt.Println("received a message: ", dto.url)
@@ -83,6 +83,7 @@ func main() {
 		}
 		return nil
 	})
+
 	//go func() {
 	//	time.Sleep(2 * time.Second)
 	//
